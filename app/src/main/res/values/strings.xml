@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">NavComponentPractice</string>
+
+    <!-- Common -->
+    <string name="next">Next</string>
+    <string name="cancel">Cancel</string>
+
+    <!-- Main Screen -->
+    <string name="view_transactions">View Transactions</string>
+    <string name="send_money">Send Money</string>
+    <string name="view_balance">View Balance</string>
+
+    <!-- Choose Recipient Screen -->
+    <string name="recipient_label">Recipient</string>
+    <string name="recipient_hint">Name</string>
+    <string name="recipient_validation_length_error">Recipient must be at least 3 characters.</string>
+
+    <!-- Specify Amount Screen -->
+    <string name="amount_label">Pay the amount below to %1$s</string>
+    <string name="amount_hint">$0.00</string>
+    <string name="send_button_text">Send</string>
+    <string name="negative_amount_error">Please enter an amount greater than $0.</string>
+
+    <!-- View Balance Screen -->
+    <string name="balance">$1</string>
+
+    <!-- Confirmation Screen-->
+    <string name="transaction_confirmation">$%1$s was sent to %2$s.</string>
+
+    <!-- View Transactions Dummy Next Destination Screen -->
+    <string name="dummy_transaction_next_text">Placeholder screen for testing ViewModel &amp; Repository lifetimes.</string>
+</resources>

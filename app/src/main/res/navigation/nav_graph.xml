@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.navcomponentpractice.MainFragment"
+        android:label="fragment_main2"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/chooseRecipient"
+            app:destination="@id/chooseRecipientFragment" />
+        <action
+            android:id="@+id/viewTransactions"
+            app:destination="@id/viewTransactionFragment" />
+        <action
+            android:id="@+id/viewBalance"
+            app:destination="@id/viewBalanceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chooseRecipientFragment"
+        android:name="com.example.navcomponentpractice.ChooseRecipientFragment"
+        android:label="ChooseRecipientFragment"
+        tools:layout="@layout/fragment_choose_recipient">
+        <action
+            android:id="@+id/specifyAmount"
+            app:destination="@id/specifyAmountFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewTransactionFragment"
+        android:name="com.example.navcomponentpractice.ViewTransactionsFragment"
+        android:label="ViewTransactionFragment"
+        tools:layout="@layout/fragment_view_transactions"
+        >
+        <action
+            android:id="@+id/moveToViewTransactionsDummyScreen"
+            app:destination="@id/viewTransactionsDummyNextDestination" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewBalanceFragment"
+        android:name="com.example.navcomponentpractice.ViewBalanceFragment"
+        android:label="ViewBalanceFragment"
+        tools:layout="@layout/fragment_view_balance"
+        />
+    <fragment
+        android:id="@+id/specifyAmountFragment"
+        android:name="com.example.navcomponentpractice.SpecifyAmountFragment"
+        android:label="SpecifyAmountFragment"
+        tools:layout="@layout/fragment_specify_amount"
+        >
+        <action
+            android:id="@+id/viewConfirmation"
+            app:destination="@id/confirmationFragment" />
+        <argument
+            android:name="recipientName"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/confirmationFragment"
+        android:name="com.example.navcomponentpractice.ConfirmationFragment"
+        android:label="ConfirmationFragment"
+        tools:layout="@layout/fragment_confirmation"
+        >
+        <argument
+            android:name="completedTransaction"
+            app:argType="com.example.navcomponentpractice.data.Transaction" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewTransactionsDummyNextDestination"
+        android:name="com.example.navcomponentpractice.ViewTransactionsDummyNextDestination"
+        android:label="fragment_view_transactions_dummy_next_destination"
+        tools:layout="@layout/fragment_view_transactions_dummy_next_destination" />
+</navigation>
