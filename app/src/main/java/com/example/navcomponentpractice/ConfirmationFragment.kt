@@ -8,7 +8,9 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.navArgs
 import com.example.navcomponentpractice.databinding.FragmentConfirmationBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class ConfirmationFragment : Fragment() {
 
     private val viewModel: ConfirmationViewModel by viewModels()
