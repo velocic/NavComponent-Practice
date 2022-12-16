@@ -1,6 +1,7 @@
-package com.example.navcomponentpractice
+package com.example.navcomponentpractice.ui
 
 import androidx.lifecycle.ViewModel
+import com.example.navcomponentpractice.TransactionRepository
 import com.example.navcomponentpractice.data.Transaction
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject

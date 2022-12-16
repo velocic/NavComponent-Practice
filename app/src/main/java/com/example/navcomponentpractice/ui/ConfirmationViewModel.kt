@@ -1,4 +1,4 @@
-package com.example.navcomponentpractice
+package com.example.navcomponentpractice.ui
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel

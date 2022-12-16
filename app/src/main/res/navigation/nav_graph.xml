@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.example.navcomponentpractice.MainFragment"
+        android:name="com.example.navcomponentpractice.ui.MainFragment"
         android:label="fragment_main2"
         tools:layout="@layout/fragment_main" >
         <action
@@ -22,7 +22,7 @@
     </fragment>
     <fragment
         android:id="@+id/chooseRecipientFragment"
-        android:name="com.example.navcomponentpractice.ChooseRecipientFragment"
+        android:name="com.example.navcomponentpractice.ui.ChooseRecipientFragment"
         android:label="ChooseRecipientFragment"
         tools:layout="@layout/fragment_choose_recipient">
         <action
@@ -31,7 +31,7 @@
     </fragment>
     <fragment
         android:id="@+id/viewTransactionFragment"
-        android:name="com.example.navcomponentpractice.ViewTransactionsFragment"
+        android:name="com.example.navcomponentpractice.ui.ViewTransactionsFragment"
         android:label="ViewTransactionFragment"
         tools:layout="@layout/fragment_view_transactions"
         >
@@ -41,13 +41,13 @@
     </fragment>
     <fragment
         android:id="@+id/viewBalanceFragment"
-        android:name="com.example.navcomponentpractice.ViewBalanceFragment"
+        android:name="com.example.navcomponentpractice.ui.ViewBalanceFragment"
         android:label="ViewBalanceFragment"
         tools:layout="@layout/fragment_view_balance"
         />
     <fragment
         android:id="@+id/specifyAmountFragment"
-        android:name="com.example.navcomponentpractice.SpecifyAmountFragment"
+        android:name="com.example.navcomponentpractice.ui.SpecifyAmountFragment"
         android:label="SpecifyAmountFragment"
         tools:layout="@layout/fragment_specify_amount"
         >
@@ -60,7 +60,7 @@
     </fragment>
     <fragment
         android:id="@+id/confirmationFragment"
-        android:name="com.example.navcomponentpractice.ConfirmationFragment"
+        android:name="com.example.navcomponentpractice.ui.ConfirmationFragment"
         android:label="ConfirmationFragment"
         tools:layout="@layout/fragment_confirmation"
         >
@@ -70,7 +70,7 @@
     </fragment>
     <fragment
         android:id="@+id/viewTransactionsDummyNextDestination"
-        android:name="com.example.navcomponentpractice.ViewTransactionsDummyNextDestination"
+        android:name="com.example.navcomponentpractice.ui.ViewTransactionsDummyNextDestination"
         android:label="fragment_view_transactions_dummy_next_destination"
         tools:layout="@layout/fragment_view_transactions_dummy_next_destination" />
 </navigation>

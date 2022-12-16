@@ -1,4 +1,4 @@
-package com.example.navcomponentpractice
+package com.example.navcomponentpractice.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.navArgs
+import com.example.navcomponentpractice.R
 import com.example.navcomponentpractice.databinding.FragmentConfirmationBinding
 import dagger.hilt.android.AndroidEntryPoint
 

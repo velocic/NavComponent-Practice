@@ -1,4 +1,4 @@
-package com.example.navcomponentpractice
+package com.example.navcomponentpractice.ui
 
 import android.content.Context
 import android.os.Bundle
@@ -12,6 +12,7 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.navcomponentpractice.R
 import com.example.navcomponentpractice.data.Transaction
 import com.example.navcomponentpractice.databinding.FragmentViewTransactionsBinding
 import dagger.hilt.android.AndroidEntryPoint

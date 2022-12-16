@@ -1,8 +1,9 @@
-package com.example.navcomponentpractice
+package com.example.navcomponentpractice.ui
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.example.navcomponentpractice.R
 import com.example.navcomponentpractice.data.ui.ValidationResult
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject

@@ -1,4 +1,4 @@
-package com.example.navcomponentpractice
+package com.example.navcomponentpractice.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,11 +6,14 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import com.example.navcomponentpractice.R
 import com.example.navcomponentpractice.data.ui.ValidationResult
 import com.example.navcomponentpractice.databinding.FragmentSpecifyAmountBinding
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
 class SpecifyAmountFragment: Fragment() {
@@ -53,28 +56,32 @@ class SpecifyAmountFragment: Fragment() {
             }
         }
 
-        viewModel.amountValidationResult.observe(viewLifecycleOwner) { validationResult ->
-            when (validationResult) {
-                is ValidationResult.Success -> {
-                    binding.amountValidationError.visibility = View.GONE
-                }
-                is ValidationResult.Error -> {
-                    binding.amountValidationError.apply {
-                        visibility = View.VISIBLE
-                        text = resources.getString(
-                            validationResult.errorMessageResId,
-                            *validationResult.messageArgs
-                        )
+        lifecycleScope.launch {
+            viewModel.amountValidationResult.collect { validationResult ->
+                when (validationResult) {
+                    is ValidationResult.Success -> {
+                        binding.amountValidationError.visibility = View.GONE
+                    }
+                    is ValidationResult.Error -> {
+                        binding.amountValidationError.apply {
+                            visibility = View.VISIBLE
+                            text = resources.getString(
+                                validationResult.errorMessageResId,
+                                *validationResult.messageArgs
+                            )
+                        }
                     }
                 }
             }
         }
 
-        viewModel.completedTransaction.observe(viewLifecycleOwner) { completedTransaction ->
-            SpecifyAmountFragmentDirections.viewConfirmation(
-                completedTransaction
-            ).let { viewConfirmation ->
-                findNavController().navigate(viewConfirmation)
+        lifecycleScope.launch {
+            viewModel.completedTransaction.collect { completedTransaction ->
+                SpecifyAmountFragmentDirections.viewConfirmation(
+                    completedTransaction
+                ).let { viewConfirmation ->
+                    findNavController().navigate(viewConfirmation)
+                }
             }
         }
     }

@@ -1,4 +1,4 @@
-package com.example.navcomponentpractice
+package com.example.navcomponentpractice.ui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
